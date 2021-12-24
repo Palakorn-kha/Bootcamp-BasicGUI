@@ -5,13 +5,13 @@ from tkinter import ttk, messagebox
 
 GUI = Tk()
 GUI.geometry('600x700') # เครื่องหมายคูณให้ใส่ ตัวเอ็กตัวเล็ก x
-GUI.title('โปรแกรมของลุง')
+GUI.title('โปรแกรมสำหรับคิดราคาทุเรียน v.0.0.1')
 
 file = PhotoImage(file='durian.png')
 IMG = Label(GUI,image=file,text='')
 IMG.pack()
 
-L1 = Label(GUI,text='โปรแกรมคำนวณทุเรียน',font=('TH Sarabun New',30,'bold'),fg='green')
+L1 = Label(GUI,text='โปรแกรมคำนวณทุเรียน (กิโลกร้ม)',font=('TH Sarabun New',30,'bold'),fg='green')
 L1.pack() #.place(x,y) , .grid(row=0,column=0)
 
 L2 = Label(GUI,text='กรุณากรอกจำนวนทุเรียน',font=('TH Sarabun New',20))
@@ -55,6 +55,7 @@ def SummaryData(event):
 	messagebox.showinfo(title,text)
 
 GUI.bind('<F1>',SummaryData)
+GUI.bind('<F2>',SummaryData)
 
 E1.focus() # ให้ cursor ไปยังตำแหน่งของ E1
 GUI.mainloop()
